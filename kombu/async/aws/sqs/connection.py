@@ -35,7 +35,7 @@ class AsyncSQSConnection(AsyncAWSQueryConnection, SQSConnection):
             is_secure=is_secure, port=port,
             proxy=proxy, proxy_port=proxy_port,
             proxy_user=proxy_user, proxy_pass=proxy_pass,
-            host=self.region.endpoint, debug=debug,
+            host=unicode(self.region.endpoint), debug=debug,
             https_connection_factory=https_connection_factory, **kwargs
         )
 
